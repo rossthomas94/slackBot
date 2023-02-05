@@ -1,7 +1,7 @@
 const slackBot = require('slackbots');
 const slackToken = require('./tokens/slack.json');
 const users = require('./config/users.json');
-const {jokes, quotes, weather } = require('./controllers');
+const {jokes, quotes, weather, news } = require('./controllers');
 
 
 
@@ -23,7 +23,7 @@ bot.on('start', () => {
         icon_emoji: ':smiley:'
     };
 
-    bot.postMessageToChannel('general', 'Hello', params);
+    // bot.postMessageToChannel('general', 'Hello', params);
 });
 
 bot.on('error', err => console.log(err))
@@ -52,6 +52,8 @@ function handleMessageChannel(message) {
         quotes.generateQuote(bot)
     }else if (message.text.includes(' weather')){
         weather.weatherController(bot,message)
-    };
+    } else if (message.text.includes(' news')){
+        weather.weatherController(bot,message)
+    } ;
 };
 
