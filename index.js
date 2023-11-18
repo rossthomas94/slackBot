@@ -6,7 +6,6 @@ const {jokes, quotes, weather, news } = require('./controllers');
 
 
 // const spotify;
-// const news;
 // const cocktails;
 // const urbanDic
 // const movie;
@@ -53,7 +52,7 @@ function handleMessageChannel(message) {
     }else if (message.text.includes(' weather')){
         weather.weatherController(bot,message)
     } else if (message.text.includes(' news')){
-        weather.weatherController(bot,message)
+        news.controlNews(bot,message)
     } ;
 };
 

@@ -24,7 +24,7 @@ const newsByCountry = function newsByCountry (bot){
 
 const controlNews = function controlNews (bot, message){
     try {
-        // generalNewsUK()x
+        generalNewsUK()
 
     } catch (error) {
         console.log(error)
